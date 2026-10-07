@@ -1,0 +1,80 @@
+{
+  "entities": {
+    "Product": {
+      "title": "Product",
+      "description": "Digital account product listed in store",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "platform": { "type": "string" },
+        "category": { "type": "string" },
+        "pricePerUnit": { "type": "number" },
+        "stockCount": { "type": "number" }
+      },
+      "required": ["id", "name", "platform", "category", "pricePerUnit", "stockCount"]
+    },
+    "Order": {
+      "title": "Order",
+      "description": "Customer order with provisioned credentials",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "createdAt": { "type": "string" },
+        "customerEmail": { "type": "string" },
+        "customerUid": { "type": "string" },
+        "totalAmount": { "type": "number" },
+        "status": { "type": "string" },
+        "paymentMethod": { "type": "string" }
+      },
+      "required": ["id", "createdAt", "customerEmail", "totalAmount", "status", "paymentMethod"]
+    },
+    "User": {
+      "title": "User",
+      "description": "User profile and registration details",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string" },
+        "email": { "type": "string" },
+        "displayName": { "type": "string" },
+        "role": { "type": "string" },
+        "createdAt": { "type": "string" },
+        "status": { "type": "string" }
+      },
+      "required": ["uid", "email", "role"]
+    },
+    "Inquiry": {
+      "title": "Inquiry",
+      "description": "Agency service consultation lead",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "createdAt": { "type": "string" },
+        "clientName": { "type": "string" },
+        "clientEmail": { "type": "string" },
+        "serviceType": { "type": "string" },
+        "details": { "type": "string" },
+        "status": { "type": "string" }
+      },
+      "required": ["id", "createdAt", "clientName", "clientEmail", "serviceType", "details", "status"]
+    }
+  },
+  "firestore": {
+    "/products/{productId}": {
+      "schema": "Product",
+      "description": "Collection of digital inventory accounts listed for sale"
+    },
+    "/orders/{orderId}": {
+      "schema": "Order",
+      "description": "Purchased orders and credential vaults"
+    },
+    "/users/{userId}": {
+      "schema": "User",
+      "description": "Registered customer and admin user profiles"
+    },
+    "/inquiries/{inquiryId}": {
+      "schema": "Inquiry",
+      "description": "Agency service proposals and consultation requests"
+    }
+  }
+}

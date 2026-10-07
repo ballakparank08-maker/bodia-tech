@@ -1,0 +1,63 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    // Strict single admin rule: ONLY ballakparank08@gmail.com has admin access
+    function isAdmin() {
+      return isSignedIn() && request.auth.token.email == 'ballakparank08@gmail.com';
+    }
+
+    function isOwner(userId) {
+      return isSignedIn() && request.auth.uid == userId;
+    }
+
+    // Products catalog
+    match /products/{productId} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    // Orders
+    match /orders/{orderId} {
+      allow read: if isAdmin() || (isSignedIn() && (
+        resource.data.customerUid == request.auth.uid ||
+        resource.data.customerEmail == request.auth.token.email
+      ));
+      allow create: if true;
+      allow update, delete: if isAdmin();
+    }
+
+    // Users collection: Admin can read all users for the Admin Management System
+    match /users/{userId} {
+      allow read: if isOwner(userId) || isAdmin();
+      allow write: if isOwner(userId) || isAdmin();
+    }
+
+    // Agency Inquiries
+    match /inquiries/{inquiryId} {
+      allow create: if true;
+      allow read, update, delete: if isAdmin();
+    }
+
+    // Newsletter
+    match /newsletter/{subId} {
+      allow create: if true;
+      allow read: if isAdmin();
+    }
+
+    // System config
+    match /config/{configDoc} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    // Connection test document
+    match /test/{docId} {
+      allow read, write: if true;
+    }
+  }
+}

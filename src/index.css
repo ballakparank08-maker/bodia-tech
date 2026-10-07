@@ -1,0 +1,173 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --obsidian: #07080b;
+    --cardbg: #101218;
+    --cardborder: rgba(255, 255, 255, 0.06);
+    --bodiaRed: #ed1b24;
+    --bodiaDarkRed: #b01018;
+    --bg-primary: #07080b;
+    --bg-secondary: #0c0e14;
+    --bg-card: #101218;
+    --border-color: rgba(255, 255, 255, 0.06);
+    --brand-red: #ed1b24;
+    --brand-red-glow: rgba(237, 27, 36, 0.4);
+    --brand-blue: #3b82f6;
+  }
+
+  body {
+    font-family: 'Inter', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    background-color: #07080b;
+    color: #ffffff;
+    overflow-x: hidden;
+  }
+
+  code, pre, .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+/* Custom scrollbars matching obsidian theme */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #07080b;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1f222d;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2a2e3d;
+}
+
+/* Obsidian Theme Utility Classes */
+.bg-obsidian {
+  background-color: #07080b;
+}
+
+.bg-cardbg {
+  background-color: #101218;
+}
+
+.border-cardborder {
+  border-color: rgba(255, 255, 255, 0.06);
+}
+
+.text-bodiaRed {
+  color: #ed1b24;
+}
+
+.bg-bodiaRed {
+  background-color: #ed1b24;
+}
+
+.shadow-red-glow {
+  box-shadow: 0 0 25px rgba(237, 27, 36, 0.4);
+}
+
+.shadow-red-glow-sm {
+  box-shadow: 0 0 15px rgba(237, 27, 36, 0.3);
+}
+
+.drop-shadow-red-glow {
+  filter: drop-shadow(0 0 15px rgba(237, 27, 36, 0.5));
+}
+
+/* Cyber glow and grid patterns */
+.cyber-grid {
+  background-image: radial-gradient(rgba(59, 130, 246, 0.08) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+.cyber-glow-red {
+  box-shadow: 0 0 25px -5px rgba(239, 68, 68, 0.35);
+}
+
+.cyber-glow-blue {
+  box-shadow: 0 0 25px -5px rgba(59, 130, 246, 0.3);
+}
+
+.glass-card {
+  background: linear-gradient(135deg, rgba(15, 25, 51, 0.8) 0%, rgba(11, 19, 37, 0.95) 100%);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(30, 44, 79, 0.8);
+}
+
+.glass-card-hover {
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card-hover:hover {
+  border-color: rgba(239, 68, 68, 0.5);
+  box-shadow: 0 10px 30px -10px rgba(239, 68, 68, 0.2);
+  transform: translateY(-2px);
+}
+
+/* Layered Moving Smoke Keyframe Animations */
+@keyframes smokeFlow1 {
+  0% {
+    transform: translate(-15%, 15%) scale(1) rotate(0deg);
+    opacity: 0.35;
+  }
+  33% {
+    transform: translate(12%, -8%) scale(1.25) rotate(45deg);
+    opacity: 0.6;
+  }
+  66% {
+    transform: translate(28%, 10%) scale(1.1) rotate(90deg);
+    opacity: 0.45;
+  }
+  100% {
+    transform: translate(45%, -15%) scale(1.35) rotate(140deg);
+    opacity: 0.35;
+  }
+}
+
+@keyframes smokeFlow2 {
+  0% {
+    transform: translate(25%, -15%) scale(1.15) rotate(20deg);
+    opacity: 0.3;
+  }
+  50% {
+    transform: translate(-12%, 18%) scale(1.4) rotate(95deg);
+    opacity: 0.55;
+  }
+  100% {
+    transform: translate(8%, -22%) scale(1.1) rotate(170deg);
+    opacity: 0.3;
+  }
+}
+
+@keyframes smokeFlow3 {
+  0% {
+    transform: translate(0%, 0%) scale(0.95) rotate(0deg);
+    opacity: 0.25;
+  }
+  50% {
+    transform: translate(18%, -15%) scale(1.3) rotate(-60deg);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translate(-10%, 15%) scale(1.05) rotate(-120deg);
+    opacity: 0.25;
+  }
+}
+
+.animate-smoke-1 {
+  animation: smokeFlow1 26s ease-in-out infinite alternate;
+}
+
+.animate-smoke-2 {
+  animation: smokeFlow2 32s ease-in-out infinite alternate;
+}
+
+.animate-smoke-3 {
+  animation: smokeFlow3 22s ease-in-out infinite alternate;
+}

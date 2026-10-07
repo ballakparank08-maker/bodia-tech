@@ -1,0 +1,6 @@
+{
+  "name": "Bodia Tech — Digital Asset Marketplace & Agency Hub",
+  "description": "High-performance digital asset marketplace, automated reseller platform, and agency service hub with instant credential delivery and AI store manager copilot.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

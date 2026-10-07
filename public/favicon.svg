@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" fill="none">
+  <defs>
+    <linearGradient id="silverWingFav" x1="150" y1="90" x2="340" y2="200" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="25%" stop-color="#F8FAFC" />
+      <stop offset="60%" stop-color="#E2E8F0" />
+      <stop offset="85%" stop-color="#CBD5E1" />
+      <stop offset="100%" stop-color="#94A3B8" />
+    </linearGradient>
+    <linearGradient id="topBevelFav" x1="150" y1="95" x2="310" y2="120" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="40%" stop-color="#FFFFFF" />
+      <stop offset="85%" stop-color="#E2E8F0" />
+      <stop offset="100%" stop-color="#94A3B8" />
+    </linearGradient>
+    <linearGradient id="navyUpperFav" x1="170" y1="130" x2="300" y2="230" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0F2868" />
+      <stop offset="45%" stop-color="#0B1C4C" />
+      <stop offset="100%" stop-color="#050C24" />
+    </linearGradient>
+    <linearGradient id="navyMidFav" x1="170" y1="180" x2="280" y2="270" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#142F78" />
+      <stop offset="60%" stop-color="#0A1842" />
+      <stop offset="100%" stop-color="#04091E" />
+    </linearGradient>
+    <linearGradient id="redMainFav" x1="150" y1="290" x2="350" y2="175" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#DC2626" />
+      <stop offset="20%" stop-color="#EF4444" />
+      <stop offset="50%" stop-color="#F87171" />
+      <stop offset="75%" stop-color="#EF4444" />
+      <stop offset="100%" stop-color="#B91C1C" />
+    </linearGradient>
+    <linearGradient id="redSweepFav" x1="230" y1="170" x2="360" y2="270" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FF4A4A" />
+      <stop offset="35%" stop-color="#E51924" />
+      <stop offset="70%" stop-color="#C4121B" />
+      <stop offset="100%" stop-color="#8A0810" />
+    </linearGradient>
+    <linearGradient id="redSpecFav" x1="240" y1="175" x2="350" y2="250" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.8" />
+      <stop offset="30%" stop-color="#FFA6A6" stop-opacity="0.45" />
+      <stop offset="70%" stop-color="#EF4444" stop-opacity="0" />
+    </linearGradient>
+    <linearGradient id="burgundyFav" x1="260" y1="220" x2="320" y2="290" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#800B13" />
+      <stop offset="100%" stop-color="#4A050A" />
+    </linearGradient>
+    <linearGradient id="bottomWedgeFav" x1="200" y1="250" x2="280" y2="295" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="60%" stop-color="#E2E8F0" />
+      <stop offset="100%" stop-color="#CBD5E1" />
+    </linearGradient>
+    <filter id="glowFav" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="6" stdDeviation="12" flood-color="#DC2626" flood-opacity="0.35" />
+    </filter>
+  </defs>
+
+  <g filter="url(#glowFav)">
+    <path d="M 175 145 L 265 145 C 305 145 328 170 318 200 C 308 228 280 245 240 248 L 175 248 Z" fill="url(#navyUpperFav)" />
+    <path d="M 168 205 L 295 150 C 310 150 322 162 316 178 L 255 285 C 235 285 208 270 198 255 Z" fill="url(#navyMidFav)" />
+    <path d="M 148 95 L 292 95 C 336 95 358 122 348 158 C 338 192 308 210 265 212 L 225 212 L 258 172 L 288 172 C 306 172 318 162 322 148 C 326 132 314 122 288 122 L 202 122 L 172 158 L 148 158 Z" fill="url(#silverWingFav)" />
+    <path d="M 148 95 L 292 95 C 332 95 352 116 345 145 C 340 126 322 112 285 112 L 165 112 Z" fill="url(#topBevelFav)" opacity="0.95" />
+    <path d="M 205 285 L 275 285 C 295 285 310 272 314 255 L 282 255 C 265 255 248 268 225 275 Z" fill="url(#bottomWedgeFav)" />
+    <path d="M 152 288 L 235 152 L 278 152 C 328 152 368 185 358 238 C 348 285 306 318 242 318 C 208 318 182 302 165 288 Z" fill="url(#redMainFav)" />
+    <path d="M 235 152 C 292 152 348 172 358 225 C 368 272 326 318 252 318 C 285 306 326 285 332 242 C 336 200 296 178 255 178 L 218 232 Z" fill="url(#redSweepFav)" />
+    <path d="M 248 160 C 295 162 338 182 348 222 C 352 238 348 252 340 265 C 346 248 344 230 332 210 C 318 184 285 170 248 160 Z" fill="url(#redSpecFav)" />
+    <path d="M 252 318 C 218 318 188 300 172 288 L 202 288 C 218 296 238 304 258 304 C 294 304 320 282 324 252 C 316 284 282 312 252 318 Z" fill="url(#burgundyFav)" />
+    <polygon points="152,288 190,288 168,310 140,298" fill="#B91C1C" />
+    <path d="M 242 215 C 275 215 292 232 286 254 C 280 270 258 282 238 282 C 222 282 212 274 206 262 Z" fill="#060E28" />
+  </g>
+</svg>
