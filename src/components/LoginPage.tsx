@@ -211,7 +211,7 @@ export const LoginPage: React.FC<LoginPageProps> = ({
     <div className="min-h-[80vh] flex items-center justify-center px-4 py-12">
       <div className="w-full max-w-xl">
         {/* Main Glass Card */}
-        <div className="relative rounded-3xl bg-slate-900/80 border border-slate-800/80 shadow-2xl p-6 sm:p-10 space-y-7 backdrop-blur-xl">
+        <div className="w-full h-full space-y-7 relative">
           {/* Subtle Ambient Glow */}
           <div className="absolute -top-20 -left-20 w-60 h-60 bg-rose-600/15 rounded-full blur-3xl pointer-events-none" />
           <div className="absolute -bottom-20 -right-20 w-60 h-60 bg-blue-600/15 rounded-full blur-3xl pointer-events-none" />
@@ -219,7 +219,7 @@ export const LoginPage: React.FC<LoginPageProps> = ({
           {/* Logo & Headline */}
           <div className="text-center space-y-3">
             <div className="flex justify-center py-1">
-              <BodiaLogo size="lg" layout="stacked" />
+              <BodiaLogo size="lg" />
             </div>
             <h1 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
               {currentUser ? 'Your Bodia Tech Account' : 'Account & Access Portal'}

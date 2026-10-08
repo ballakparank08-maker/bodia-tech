@@ -37,7 +37,7 @@ export const Footer: React.FC = () => {
             <div className="flex items-center gap-3 text-[11px] text-slate-500">
               <span className="flex items-center gap-1.5 text-emerald-400">
                 <span className="w-2 h-2 rounded-full bg-emerald-400" />
-                Vault Nodes Operational
+                API Nodes Operational
               </span>
               <span>•</span>
               <span>Encrypted Auto-Delivery</span>

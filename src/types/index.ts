@@ -1,11 +1,14 @@
 export type ProductCategory =
   | 'all'
-  | 'email'
-  | 'social'
-  | 'dating'
-  | 'messaging'
-  | 'developer'
-  | 'gaming';
+  | 'social-media-messaging'
+  | 'email-services'
+  | 'ecommerce-professional'
+  | 'google-ecosystem'
+  | 'proxies-vps-software'
+  | 'gift-cards-financial'
+  | 'subscriptions-ai'
+  | 'reviews-local'
+  | 'dating';
 
 export interface ProductAttributes {
   country: string;

@@ -35,6 +35,7 @@ import {
   saveOrderToFirestore,
   saveProductToFirestore,
 } from './firebase.ts';
+import { motion, AnimatePresence } from 'motion/react';
 import { Header } from './components/Header.tsx';
 import { HeroBanner } from './components/HeroBanner.tsx';
 import { CatalogFilterBar } from './components/CatalogFilterBar.tsx';
@@ -255,7 +256,7 @@ export default function App() {
   const totalCartUnits = cartItems.reduce((acc, i) => acc + i.quantity, 0);
 
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-100 flex flex-col selection:bg-rose-500/30 selection:text-white pb-20 md:pb-0">
+    <div className="min-h-screen bg-gradient-to-br from-[#070c18] via-[#091124] to-[#0c1630] text-slate-100 flex flex-col selection:bg-rose-500/30 selection:text-white pb-20 md:pb-0 relative overflow-hidden">
       {/* Header with Google Login and Role-Guarded Navigation */}
       <Header
         currentTab={currentTab}
@@ -276,10 +277,24 @@ export default function App() {
       />
 
       {/* Main Content Areas based on selected Tab */}
-      <main className="flex-1 pt-24 md:pt-28">
-        {/* TAB 0: MODERN GLASSMORPHISM LANDING PAGE */}
-        {currentTab === 'home' && (
-          <LandingPage
+      <main className="flex-1 pt-24 md:pt-28 px-4 sm:px-6 lg:px-8 pb-12 w-full flex justify-center">
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={currentTab}
+            initial={{ opacity: 0, scale: 0.98, y: 20 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            exit={{ opacity: 0, scale: 0.98, y: -20 }}
+            transition={{ duration: 0.4, ease: "easeOut" }}
+            className="w-full max-w-[1300px] bg-slate-900/60 backdrop-blur-[24px] border border-slate-800/80 rounded-[32px] p-6 sm:p-10 lg:p-12 shadow-[0_30px_80px_rgba(0,0,0,0.8)] overflow-hidden relative z-10"
+          >
+            {/* Ambient Gradients for the global Glass Container */}
+            <div className="absolute -top-32 -left-32 w-80 h-80 bg-rose-600/10 rounded-full blur-3xl pointer-events-none z-0" />
+            <div className="absolute -bottom-32 -right-32 w-80 h-80 bg-amber-600/10 rounded-full blur-3xl pointer-events-none z-0" />
+
+            <div className="relative z-10 w-full h-full">
+              {/* TAB 0: MODERN GLASSMORPHISM LANDING PAGE */}
+              {currentTab === 'home' && (
+                <LandingPage
             onNavigateToServices={() => {
               setCurrentTab('agency');
               window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -311,6 +326,8 @@ export default function App() {
             <CatalogFilterBar
               selectedCategory={selectedCategory}
               setSelectedCategory={setSelectedCategory}
+              selectedPlatform={selectedPlatform}
+              setSelectedPlatform={setSelectedPlatform}
               inStockOnly={inStockOnly}
               setInStockOnly={setInStockOnly}
               sortBy={sortBy}
@@ -444,6 +461,9 @@ export default function App() {
             </div>
           )
         )}
+            </div>
+          </motion.div>
+        </AnimatePresence>
       </main>
 
       {/* Footer */}

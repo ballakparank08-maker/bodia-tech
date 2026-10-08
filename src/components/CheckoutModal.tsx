@@ -57,7 +57,7 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({
 
   const handleProcessOrder = async () => {
     if (!customerEmail || !customerEmail.includes('@')) {
-      setErrorMsg('Please enter a valid recipient email for your credential vault receipt.');
+      setErrorMsg('Please enter a valid recipient email for your credential receipt.');
       return;
     }
 

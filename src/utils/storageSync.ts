@@ -2,11 +2,11 @@ import { AccountProduct, PlacedOrder, UserProfile } from '../types/index.ts';
 import { INITIAL_PRODUCTS, INITIAL_USER_PROFILE } from '../data/initialProducts.ts';
 
 export const CACHE_VERSION_KEY = 'bodiatech_cache_version';
-export const CURRENT_CACHE_VERSION = 'bodiatech_v2_fb_stocks_plus_1';
-export const PRODUCTS_STORAGE_KEY = 'bodiatech_products_vault';
-export const ORDERS_STORAGE_KEY = 'bodiatech_orders_vault';
-export const USER_STORAGE_KEY = 'bodiatech_user_profile';
-export const CART_STORAGE_KEY = 'bodiatech_active_cart';
+export const CURRENT_CACHE_VERSION = 'bodiatech_v3_reset';
+export const PRODUCTS_STORAGE_KEY = 'bodiatech_products_vault_v20';
+export const ORDERS_STORAGE_KEY = 'bodiatech_orders_vault_v2';
+export const USER_STORAGE_KEY = 'bodiatech_user_profile_v2';
+export const CART_STORAGE_KEY = 'bodiatech_active_cart_v2';
 
 export function initializeVersionedCache(): {
   products: AccountProduct[];

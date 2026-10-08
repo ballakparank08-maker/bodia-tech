@@ -17,8 +17,6 @@ export const HeroBanner: React.FC<HeroBannerProps> = ({
   setSelectedPlatform,
   onExploreAgency,
 }) => {
-  const platforms = ['All', 'Facebook', 'Gmail', 'Twitter/X', 'Telegram', 'Discord', 'Apple ID', 'LinkedIn', 'Tinder', 'TikTok'];
-
   return (
     <div className="relative overflow-hidden bg-gradient-to-b from-slate-900 to-slate-950 border-b border-slate-800/80 pt-10 pb-12">
       {/* Background cyber grid and subtle glow spheres */}
@@ -37,7 +35,7 @@ export const HeroBanner: React.FC<HeroBannerProps> = ({
           <h1 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight leading-[1.15]">
             Enterprise Digital Assets & <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-rose-400 to-amber-300">
-              Instant Credential Vaults
+              Instant Credential Inventories
             </span>
           </h1>
 
@@ -73,28 +71,7 @@ export const HeroBanner: React.FC<HeroBannerProps> = ({
               <Terminal className="w-4 h-4 text-rose-400" />
               Custom Agency Solutions
             </button>
-          </div>
-
-          {/* Fast Platform Filter Badges */}
-          <div className="mt-5 flex items-center gap-1.5 overflow-x-auto pb-2 scrollbar-none text-xs">
-            <span className="text-slate-400 shrink-0 font-medium mr-1">Filter:</span>
-            {platforms.map((plat) => {
-              const active = (plat === 'All' && !selectedPlatform) || selectedPlatform === plat;
-              return (
-                <button
-                  key={plat}
-                  onClick={() => setSelectedPlatform(plat === 'All' ? '' : plat)}
-                  className={`px-3 py-1 rounded-lg shrink-0 font-semibold transition cursor-pointer ${
-                    active
-                      ? 'bg-gradient-to-r from-rose-600 to-amber-500 text-white shadow-[0_0_10px_rgba(225,29,72,0.4)]'
-                      : 'bg-slate-900 border border-slate-800/80 text-slate-300 hover:text-white hover:border-slate-500'
-                  }`}
-                >
-                  {plat}
-                </button>
-              );
-            })}
-          </div>
+        </div>
         </div>
 
         {/* 10 Rolling Automatic Showcase for Product Store and Product Service */}

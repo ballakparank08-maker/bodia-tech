@@ -58,20 +58,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
             </span>
           </div>
 
-          {/* Stock Status Badge */}
-          {isOutOfStock ? (
-            <span className="px-2 py-0.5 rounded text-[11px] font-semibold bg-rose-950/80 text-rose-400 border border-rose-800">
-              Out of Stock
-            </span>
-          ) : isLowStock ? (
-            <span className="px-2 py-0.5 rounded text-[11px] font-semibold bg-amber-950/80 text-amber-300 border border-amber-800/80 animate-pulse">
-              Low Stock: {product.stockCount} left
-            </span>
-          ) : (
-            <span className="px-2 py-0.5 rounded text-[11px] font-semibold bg-emerald-950/80 text-emerald-400 border border-emerald-800/80">
-              {product.stockCount} in Vault
-            </span>
-          )}
+          {/* Removed Stock Status Badge */}
         </div>
 
         {/* Title */}

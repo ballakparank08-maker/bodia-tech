@@ -1,6 +1,6 @@
 import React from 'react';
 import { BodiaLogo } from './BodiaLogo.tsx';
-import { ShoppingCart, ShieldCheck, Cpu, Layers, User, LogIn, Sparkles, Wand2 } from 'lucide-react';
+import { ShoppingCart, ShieldCheck, Cpu, Layers, User, LogIn, Sparkles, Wand2, Database } from 'lucide-react';
 import { UserProfile } from '../types/index.ts';
 import { GoogleAuthUser } from '../utils/auth.ts';
 

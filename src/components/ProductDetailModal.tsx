@@ -42,9 +42,7 @@ export const ProductDetailModal: React.FC<ProductDetailModalProps> = ({
                 {product.platform}
               </span>
               <span className="text-xs font-mono text-slate-400">SKU: {product.id}</span>
-              <span className="px-2 py-0.5 rounded bg-emerald-950/80 text-emerald-400 border border-emerald-800 text-xs font-semibold">
-                {product.stockCount} in Vault
-              </span>
+              {/* Removed vault stock indicator */}
             </div>
             <h2 className="text-xl sm:text-2xl font-bold text-white leading-snug">
               {product.name}

@@ -39,7 +39,7 @@ export const AdminCopilotModal: React.FC<AdminCopilotModalProps> = ({
     {
       id: 'welcome',
       role: 'assistant',
-      content: `Hello! I am your Bodia Tech AI Store Manager Copilot powered by Google Gemini SDK with live multi-model failover (gemini-3.8-flash ➔ gemini-3.1-flash-lite ➔ gemini-flash-latest).\n\nI have real-time visibility into your ${products.length} SKUs and ${products.reduce((acc, p) => acc + p.stockCount, 0)} total vault units. Ask me to analyze sales margins, craft new inventory listings, or adjust pricing across platforms.`,
+      content: `Hello! I am your Bodia Tech AI Store Manager Copilot powered by Google Gemini SDK with live multi-model failover (gemini-3.8-flash ➔ gemini-3.1-flash-lite ➔ gemini-flash-latest).\n\nI have real-time visibility into your ${products.length} SKUs and ${products.reduce((acc, p) => acc + p.stockCount, 0)} total stock units. Ask me to analyze sales margins, craft new inventory listings, or adjust pricing across platforms.`,
       timestamp: new Date().toISOString(),
       modelUsed: 'gemini-3.8-flash',
     },
@@ -51,7 +51,7 @@ export const AdminCopilotModal: React.FC<AdminCopilotModalProps> = ({
   // Listing Generator form state
   const [generatorBrief, setGeneratorBrief] = useState('');
   const [generatorPlatform, setGeneratorPlatform] = useState('Instagram');
-  const [generatorCategory, setGeneratorCategory] = useState('social');
+  const [generatorCategory, setGeneratorCategory] = useState('social-media-messaging');
   const [isGeneratingListing, setIsGeneratingListing] = useState(false);
   const [generatedListings, setGeneratedListings] = useState<AccountProduct[] | null>(null);
   const [listingSuccessMsg, setListingSuccessMsg] = useState<string | null>(null);
@@ -419,11 +419,15 @@ export const AdminCopilotModal: React.FC<AdminCopilotModalProps> = ({
                     onChange={(e) => setGeneratorCategory(e.target.value)}
                     className="w-full px-3 py-2 rounded-xl bg-slate-900 border border-slate-800/80 text-xs text-white"
                   >
-                    <option value="social">Social Networks</option>
-                    <option value="email">Email Services</option>
-                    <option value="messaging">Messaging Apps</option>
-                    <option value="dating">Dating & Lifestyle</option>
-                    <option value="developer">Developer & Cloud</option>
+                    <option value="social-media-messaging">Social Media & Messaging</option>
+                    <option value="email-services">Email Services & Leads</option>
+                    <option value="ecommerce-professional">E-Commerce & Professional</option>
+                    <option value="google-ecosystem">Google Ecosystem & Video</option>
+                    <option value="proxies-vps-software">Proxies, VPS, Software & Gaming</option>
+                    <option value="gift-cards-financial">Gift Cards & Financial Cards</option>
+                    <option value="subscriptions-ai">Subscriptions, AI & Premium Apps</option>
+                    <option value="reviews-local">Reviews & Local Business</option>
+                    <option value="dating">Dating Platforms</option>
                   </select>
                 </div>
               </div>

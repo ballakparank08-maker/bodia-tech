@@ -110,7 +110,7 @@ export const AgencyServicesHub: React.FC<AgencyServicesHubProps> = ({
   };
 
   return (
-    <div className="w-full max-w-[1200px] mx-auto bg-slate-900/80 backdrop-blur-[20px] border border-slate-800/80 rounded-[30px] p-6 sm:p-12 lg:p-16 shadow-[0_25px_60px_rgba(0,0,0,0.6)] relative overflow-hidden space-y-12 transition-all duration-300 z-10 my-8">
+    <div className="w-full h-full space-y-12">
       {/* Eyebrow and Headline */}
       <div className="text-center max-w-3xl mx-auto">
         <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-rose-600/10 border border-rose-500/30 text-rose-400 text-xs font-bold uppercase tracking-wider mb-3">

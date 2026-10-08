@@ -1,5 +1,5 @@
 import { AccountProduct, PlacedOrder, ServiceInquiry, SupportConfig, UserProfile, CopilotMessage } from '../types/index.ts';
-import { saveCachedProducts, saveCachedOrders } from './storageSync.ts';
+import { saveCachedProducts, saveCachedOrders, PRODUCTS_STORAGE_KEY } from './storageSync.ts';
 import { getStoredAuthUser } from './auth.ts';
 import { INITIAL_PRODUCTS, INITIAL_SUPPORT_CONFIG, INITIAL_USER_PROFILE } from '../data/initialProducts.ts';
 
@@ -31,7 +31,7 @@ export async function fetchProducts(): Promise<AccountProduct[]> {
     return products;
   } catch (err) {
     console.error("Firebase fetchProducts failed", err);
-    return getLocalItem<AccountProduct[]>('bodiatech_products_vault', INITIAL_PRODUCTS);
+    return getLocalItem<AccountProduct[]>(PRODUCTS_STORAGE_KEY, INITIAL_PRODUCTS);
   }
 }
 
@@ -235,7 +235,7 @@ export async function generateAiListing(brief: string, platform?: string, catego
 
 export async function generateBulkAiListings(brief: string, platform?: string, category?: string): Promise<AccountProduct[]> {
   // Free AI Heuristic Store Manager (Client-Side Parser)
-  await new Promise(resolve => setTimeout(resolve, 1500)); // Simulate AI thinking delay
+  // Removed artificial delay for performance
   
   const lowerBrief = brief.toLowerCase();
   
@@ -268,8 +268,8 @@ export async function generateBulkAiListings(brief: string, platform?: string, c
   }
 
   // Determine Category
-  let detCategory = category || 'social';
-  if (!category || category === 'social') {
+  let detCategory = category || 'social-media-messaging';
+  if (!category || category === 'social-media-messaging') {
      if (lowerBrief.includes('ads') || lowerBrief.includes('bm') || lowerBrief.includes('business')) detCategory = 'ads';
      else if (lowerBrief.includes('pva') || lowerBrief.includes('verified')) detCategory = 'pva';
   }

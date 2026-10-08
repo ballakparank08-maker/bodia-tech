@@ -243,7 +243,7 @@ export const RollingProductShowcase: React.FC<RollingProductShowcaseProps> = ({
       borderTheme: 'border-cyan-500/40 hover:border-cyan-400',
       accentColor: '#06b6d4',
       icon: 'tg',
-      actionText: 'View Telegram Vault',
+      actionText: 'View Telegram Stock',
       actionType: 'platform_filter',
       actionTarget: 'Telegram',
       svgGraphic: (

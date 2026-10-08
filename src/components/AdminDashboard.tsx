@@ -240,7 +240,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
   };
 
   return (
-    <div className="w-full max-w-[1200px] mx-auto bg-slate-900/80 backdrop-blur-[20px] border border-slate-800/80 rounded-[30px] p-6 sm:p-12 lg:p-16 shadow-[0_25px_60px_rgba(0,0,0,0.6)] relative overflow-hidden space-y-8 transition-all duration-300 z-10 my-8">
+    <div className="w-full h-full space-y-8">
       {/* Top Banner & Analytics Cards */}
       <div>
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-6">
@@ -303,7 +303,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
 
           <div className="p-4 rounded-xl bg-slate-900/80 backdrop-blur-md border border-slate-800/80">
             <div className="flex items-center justify-between text-slate-400 text-xs">
-              <span>Total Units in Vault</span>
+              <span>Total Units in Stock</span>
               <Database className="w-4 h-4 text-emerald-400" />
             </div>
             <div className="text-2xl font-black text-emerald-400 font-mono mt-1.5">{totalUnitsInStock}</div>
@@ -458,7 +458,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
                   id: `bt-custom-${Date.now().toString(36)}`,
                   name: 'New Premium Account Listing',
                   platform: 'Facebook',
-                  category: 'social',
+                  category: 'social-media-messaging',
                   shortDesc: 'Handcrafted verified accounts with full warranty.',
                   fullDesc: 'Aged profiles created with residential IPs, PVA verified.',
                   pricePerUnit: 12.00,
@@ -1252,11 +1252,15 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
                       onChange={(e) => setEditingProduct({ ...editingProduct, category: e.target.value })}
                       className="w-full px-3 py-2 rounded-lg bg-slate-950 border border-slate-800/80 text-white"
                     >
-                      <option value="social">Social</option>
-                      <option value="email">Email</option>
-                      <option value="messaging">Messaging</option>
-                      <option value="dating">Dating</option>
-                      <option value="developer">Developer</option>
+                      <option value="social-media-messaging">Social Media & Messaging</option>
+                      <option value="email-services">Email Services & Leads</option>
+                      <option value="ecommerce-professional">E-Commerce & Professional</option>
+                      <option value="google-ecosystem">Google Ecosystem & Video</option>
+                      <option value="proxies-vps-software">Proxies, VPS, Software & Gaming</option>
+                      <option value="gift-cards-financial">Gift Cards & Financial Cards</option>
+                      <option value="subscriptions-ai">Subscriptions, AI & Premium Apps</option>
+                      <option value="reviews-local">Reviews & Local Business</option>
+                      <option value="dating">Dating Platforms</option>
                     </select>
                   </div>
                 </div>
