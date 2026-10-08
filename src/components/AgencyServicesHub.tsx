@@ -271,7 +271,7 @@ export const AgencyServicesHub: React.FC<AgencyServicesHubProps> = ({
       </div>
 
       {/* Auto-Rolling Service Banners */}
-      <div className="w-full relative z-20 max-w-5xl mx-auto rounded-2xl overflow-hidden shadow-2xl border border-slate-800/80 bg-slate-900/50 aspect-[2/1] sm:aspect-[2.5/1]">
+      <div className="w-full relative z-20 max-w-5xl mx-auto rounded-2xl overflow-hidden shadow-2xl border border-slate-800/80 bg-slate-900/50 aspect-[1024/571]">
         <div 
           className="flex transition-transform duration-700 ease-in-out h-full"
           style={{ transform: `translateX(-${currentBannerIndex * 100}%)` }}
@@ -281,7 +281,7 @@ export const AgencyServicesHub: React.FC<AgencyServicesHubProps> = ({
               <img 
                 src={banner} 
                 alt={`Service Banner ${idx + 1}`} 
-                className="w-full h-full object-cover"
+                className="w-full h-full object-contain"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-80" />
             </div>
