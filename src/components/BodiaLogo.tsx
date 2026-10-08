@@ -1,4 +1,5 @@
 import React from 'react';
+import logoUrl from '../assets/logo.png';
 
 interface BodiaLogoProps {
   className?: string;
@@ -23,7 +24,7 @@ export const BodiaLogo: React.FC<BodiaLogoProps> = ({
       className={`flex flex-col items-center justify-center select-none ${className}`}
       aria-label="Bodia Tech"
     >
-      <img src="/logo.png" alt="Bodia Tech Logo" className={`${imageSize} w-auto object-contain drop-shadow-lg`} />
+      <img src={logoUrl} alt="Bodia Tech Logo" className={`${imageSize} w-auto object-contain drop-shadow-lg`} />
     </div>
   );
 };
