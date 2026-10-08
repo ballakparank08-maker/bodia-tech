@@ -75,42 +75,42 @@ export const LandingPage: React.FC<LandingPageProps> = ({
         {/* Metric 1 */}
         <div
           onClick={onNavigateToServices}
-          className="bg-slate-900/80 border border-slate-800/80 hover:border-rose-500/50 rounded-[20px] p-6 transition-all duration-300 hover:-translate-y-1.5 cursor-pointer group shadow-sm"
+          className="bg-slate-900/80 border border-slate-800/80 rounded-[20px] p-6 cursor-pointer group shadow-sm glass-card-hover"
         >
           <div className="text-[#94a3b8] text-xs sm:text-sm font-medium mb-2.5 flex items-center justify-between">
             <span>Digital Services</span>
             <ExternalLink className="w-3.5 h-3.5 opacity-0 group-hover:opacity-100 transition-opacity text-rose-400" />
           </div>
           <div className="text-xl sm:text-[22px] font-bold text-rose-400">
-            Web & App Dev
+            Web-App Development
           </div>
         </div>
 
         {/* Metric 2 */}
         <div
-          onClick={onNavigateToStore}
-          className="bg-slate-900/80 border border-slate-800/80 hover:border-amber-500/50 rounded-[20px] p-6 transition-all duration-300 hover:-translate-y-1.5 cursor-pointer group shadow-sm"
+          onClick={onNavigateToServices}
+          className="bg-slate-900/80 border border-slate-800/80 rounded-[20px] p-6 cursor-pointer group shadow-sm glass-card-hover"
         >
           <div className="text-[#94a3b8] text-xs sm:text-sm font-medium mb-2.5 flex items-center justify-between">
-            <span>E-Commerce</span>
-            <ExternalLink className="w-3.5 h-3.5 opacity-0 group-hover:opacity-100 transition-opacity text-amber-400" />
+            <span>Growth & Strategy</span>
+            <ExternalLink className="w-3.5 h-3.5 opacity-0 group-hover:opacity-100 transition-opacity text-blue-400" />
           </div>
-          <div className="text-xl sm:text-[22px] font-bold text-amber-400">
-            Storefronts
+          <div className="text-xl sm:text-[22px] font-bold text-blue-400">
+            Digital Marketing
           </div>
         </div>
 
         {/* Metric 3 */}
         <div
           onClick={onNavigateToServices}
-          className="bg-slate-900/80 border border-slate-800/80 hover:border-emerald-500/50 rounded-[20px] p-6 transition-all duration-300 hover:-translate-y-1.5 cursor-pointer group shadow-sm"
+          className="bg-slate-900/80 border border-slate-800/80 rounded-[20px] p-6 cursor-pointer group shadow-sm glass-card-hover"
         >
           <div className="text-[#94a3b8] text-xs sm:text-sm font-medium mb-2.5 flex items-center justify-between">
-            <span>Client Support</span>
-            <Headphones className="w-3.5 h-3.5 text-emerald-400 opacity-70" />
+            <span>Creative & Branding</span>
+            <ExternalLink className="w-3.5 h-3.5 opacity-0 group-hover:opacity-100 transition-opacity text-purple-400" />
           </div>
-          <div className="text-xl sm:text-[22px] font-bold text-emerald-400">
-            24/7 Dedicated
+          <div className="text-xl sm:text-[22px] font-bold text-purple-400">
+            UI/UX Design
           </div>
         </div>
       </div>

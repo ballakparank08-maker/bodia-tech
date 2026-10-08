@@ -113,7 +113,7 @@ export const Testimonials: React.FC = () => {
   };
 
   return (
-    <div className="w-full bg-slate-900/80 backdrop-blur-[20px] border border-slate-800/80 rounded-[30px] p-6 sm:p-10 lg:p-12 shadow-[0_25px_60px_rgba(0,0,0,0.6)] relative overflow-hidden transition-all duration-300">
+    <div className="w-full bg-slate-900/80 backdrop-blur-[20px] border border-slate-800/80 rounded-[30px] p-6 sm:p-10 lg:p-12 shadow-[0_25px_60px_rgba(0,0,0,0.6)] relative overflow-hidden transition-all duration-300 glass-card-hover">
       {/* Ambient background glows matching the hero card */}
       <div className="absolute -top-32 -left-32 w-80 h-80 bg-rose-600/15 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute -bottom-32 -right-32 w-80 h-80 bg-blue-600/15 rounded-full blur-3xl pointer-events-none" />
@@ -173,7 +173,7 @@ export const Testimonials: React.FC = () => {
           return (
             <div
               key={item.id}
-              className="group relative bg-slate-900/85 backdrop-blur-[16px] border border-slate-800/80 hover:border-rose-500/50 rounded-[24px] p-5 sm:p-6 transition-all duration-300 hover:-translate-y-2 shadow-[0_15px_35px_rgba(0,0,0,0.4)] hover:shadow-[0_20px_40px_rgba(239,68,68,0.2)] flex flex-col justify-between overflow-hidden"
+              className="group relative bg-slate-900/85 backdrop-blur-[16px] border border-slate-800/80 rounded-[24px] p-5 sm:p-6 shadow-[0_15px_35px_rgba(0,0,0,0.4)] flex flex-col justify-between overflow-hidden glass-card-hover"
             >
               {/* Subtle top-right ambient flare */}
               <div className="absolute top-0 right-0 w-28 h-28 bg-gradient-to-bl from-red-600/10 via-transparent to-transparent pointer-events-none" />

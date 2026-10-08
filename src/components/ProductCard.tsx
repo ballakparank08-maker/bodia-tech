@@ -42,7 +42,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
   };
 
   return (
-    <div className="group relative flex flex-col justify-between rounded-2xl bg-slate-900/80 backdrop-blur-md border border-slate-800/80 hover:border-rose-500/50 p-5 transition-all duration-200 hover:shadow-xl hover:shadow-[0_0_20px_rgba(225,29,72,0.15)]">
+    <div className="group relative flex flex-col justify-between rounded-2xl bg-slate-900/80 backdrop-blur-md border border-slate-800/80 p-5 glass-card-hover">
       <div>
         {/* Top meta tags */}
         <div className="flex items-center justify-between gap-2 mb-3">

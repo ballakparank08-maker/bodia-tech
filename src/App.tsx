@@ -285,7 +285,7 @@ export default function App() {
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.98, y: -20 }}
             transition={{ duration: 0.4, ease: "easeOut" }}
-            className="w-full max-w-[1300px] bg-slate-900/60 backdrop-blur-[24px] border border-slate-800/80 rounded-[32px] p-6 sm:p-10 lg:p-12 shadow-[0_30px_80px_rgba(0,0,0,0.8)] overflow-hidden relative z-10"
+            className="w-full max-w-[1300px] bg-slate-900/50 backdrop-blur-[24px] border border-white/10 rounded-[32px] p-6 sm:p-10 lg:p-12 shadow-[0_8px_32px_0_rgba(0,0,0,0.5)] overflow-hidden relative z-10 glass-card-hover"
           >
             {/* Ambient Gradients for the global Glass Container */}
             <div className="absolute -top-32 -left-32 w-80 h-80 bg-rose-600/10 rounded-full blur-3xl pointer-events-none z-0" />
