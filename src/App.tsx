@@ -336,7 +336,7 @@ export default function App() {
             />
 
             {/* Product Grid */}
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8 min-h-[70vh]">
               {filteredProducts.length === 0 ? (
                 <div className="text-center py-20 bg-slate-900/80 backdrop-blur-md rounded-2xl border border-slate-800/80">
                   <p className="text-base font-semibold text-slate-300">No inventory matches your active filter.</p>
