@@ -256,7 +256,14 @@ export default function App() {
   const totalCartUnits = cartItems.reduce((acc, i) => acc + i.quantity, 0);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#070c18] via-[#091124] to-[#0c1630] text-slate-100 flex flex-col selection:bg-rose-500/30 selection:text-white pb-20 md:pb-0 relative overflow-hidden">
+    <div className="min-h-screen bg-transparent text-slate-100 flex flex-col selection:bg-rose-500/30 selection:text-white pb-20 md:pb-0 relative overflow-hidden">
+      {/* Ambient Smoky Motion 4K Live Wallpaper Effect */}
+      <div className="smoke-live-wallpaper">
+        <div className="smoke-orb smoke-orb-1"></div>
+        <div className="smoke-orb smoke-orb-2"></div>
+        <div className="smoke-orb smoke-orb-3"></div>
+      </div>
+
       {/* Header with Google Login and Role-Guarded Navigation */}
       <Header
         currentTab={currentTab}
