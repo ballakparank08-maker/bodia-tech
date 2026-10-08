@@ -178,7 +178,7 @@ export async function submitServiceInquiry(payload: Partial<ServiceInquiry>): Pr
     clientName: payload.clientName || 'Unknown',
     clientEmail: payload.clientEmail || 'unknown@example.com',
     telegramHandle: payload.telegramHandle,
-    serviceType: payload.serviceType || 'custom',
+    serviceType: payload.serviceType || 'custom_web',
     budget: payload.budget || '$1,000 - $3,000',
     details: payload.details || '',
     status: 'new',
@@ -222,6 +222,7 @@ export async function updateAdminUserStatus(uid: string, status: 'active' | 'sus
 
 export async function sendCopilotMessage(message: string, history: CopilotMessage[]): Promise<CopilotMessage> {
   return {
+    id: Date.now().toString(),
     role: 'assistant',
     content: "Static mode: Offline mock response.",
     timestamp: new Date().toISOString()

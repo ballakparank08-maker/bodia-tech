@@ -152,7 +152,7 @@ export const AdminCopilotModal: React.FC<AdminCopilotModalProps> = ({
   const handleApplyGeneratedListings = async () => {
     if (!generatedListings || generatedListings.length === 0) return;
     try {
-      const savedProducts = [];
+      const savedProducts: AccountProduct[] = [];
       for (const listing of generatedListings) {
         const saved = await saveProduct(listing);
         savedProducts.push(saved);

@@ -122,7 +122,7 @@ export const CatalogFilterBar: React.FC<CatalogFilterBarProps> = ({
   const scrollRef = useRef<HTMLDivElement>(null);
   const platformScrollRef = useRef<HTMLDivElement>(null);
 
-  const scroll = (ref: React.RefObject<HTMLDivElement>, direction: 'left' | 'right') => {
+  const scroll = (ref: React.RefObject<HTMLDivElement | null>, direction: 'left' | 'right') => {
     if (ref.current) {
       const scrollAmount = 250;
       ref.current.scrollBy({

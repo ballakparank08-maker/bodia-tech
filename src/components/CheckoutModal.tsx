@@ -45,6 +45,7 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({
   const discountAmount = Math.round((subtotal * promoDiscountPercent) / 100 * 100) / 100;
   const finalTotal = Math.max(0, Math.round((subtotal - discountAmount) * 100) / 100);
 
+  const usdtNetwork = 'TRC20';
   const usdtDepositAddress = usdtNetwork === 'TRC20'
     ? 'TXb9LzF8yPq7kM3j4N2V1sA0wR9eDtK6hB'
     : '0x71C...B9aF4932014B7012Da';

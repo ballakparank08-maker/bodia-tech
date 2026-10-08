@@ -124,7 +124,6 @@ export const FloatingCustomerCare: React.FC<FloatingCustomerCareProps> = ({
                   {supportConfig.warrantyPolicy}
                 </div>
               </div>
-            </div>
           </div>
         </div>
       )}
